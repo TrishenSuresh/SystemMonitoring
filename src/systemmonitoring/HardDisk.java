@@ -22,14 +22,6 @@ public class HardDisk {
     private String type;
     private String mount;
     
-    public HardDisk(FileSystem fileSystem)
-    {
-        System.out.println("File System:");
-        OSFileStore[] fsArray = fileSystem.getFileStores();
-        
-        
-    }
-
     HardDisk(OSFileStore fs) 
     {
         name = fs.getName();
@@ -38,8 +30,38 @@ public class HardDisk {
         used = total - usable;
         type = fs.getType();
         mount = fs.getMount();
-        System.out.println(name);
-        
     }
+
+    public String getName() 
+    {
+        return name;
+    }
+
+    public long getUsable() 
+    {
+        return usable;
+    }
+
+    public long getTotal() 
+    {
+        return total;
+    }
+
+    public long getUsed() 
+    {
+        return used;
+    }
+
+    public String getType() 
+    {
+        return type;
+    }
+
+    public String getMount() 
+    {
+        return mount;
+    }
+    
+    
     
 }

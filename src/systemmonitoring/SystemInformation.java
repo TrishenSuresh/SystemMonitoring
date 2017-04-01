@@ -5,6 +5,7 @@
  */
 package systemmonitoring;
 
+import java.util.ArrayList;
 import java.util.List;
 import oshi.SystemInfo;
 import oshi.hardware.HardwareAbstractionLayer;
@@ -21,7 +22,7 @@ public class SystemInformation {
     private HardwareAbstractionLayer hal;
     private RAM ComputerMemory;
     private OperatingSystem os;
-    private List<HardDisk> Disks;
+    private List<HardDisk> Disks = new ArrayList<HardDisk>();
     
     
    public SystemInformation()
@@ -36,7 +37,7 @@ public class SystemInformation {
        for(OSFileStore fs : fsArray)
        {
            HardDisk newDisk = new HardDisk(fs);
-        //   Disks.add(newDisk);
+           Disks.add(newDisk);   
        }
    }
 

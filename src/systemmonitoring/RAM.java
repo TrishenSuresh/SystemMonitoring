@@ -55,6 +55,18 @@ public class RAM {
         return availableMemory;
     }
     
+    public void print()
+    {
+        System.out.println("===================================");
+        System.out.println("|      Random Access Memory       |");
+        System.out.println("===================================");
+        System.out.println("Used Memory      : "+getUsedMemoryString());
+        System.out.println("Available Memory : "+getAvailableMemoryString());
+        System.out.println("Total Memory     : "+getTotalMemoryString());
+        System.out.println("===================================");
+        System.out.println();
+    }
+    
     
 
     
