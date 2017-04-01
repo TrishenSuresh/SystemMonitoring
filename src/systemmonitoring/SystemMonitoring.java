@@ -8,8 +8,8 @@ public class SystemMonitoring {
     public static void main(String[] args) 
     {
         SystemInformation info = new SystemInformation();
-//        System.out.println(info.getComputerMemory().getAvailableMemoryString());
-//        System.out.println(info.getComputerMemory().getUsedMemoryString());
-        
+        System.out.println(info.getComputerMemory().getAvailableMemoryString());
+        System.out.println(info.getComputerMemory().getUsedMemoryString());
+        System.out.println(info.getDisks().get(2).getName());
     }
 }
